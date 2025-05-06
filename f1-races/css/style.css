@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ga Maamli', Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c;
+  color: #f1f1f1;
+  line-height: 1.6;
+  padding: 20px;
+  background-image: url('../img/track.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > p {
+  text-align: center;
+}
+
+.write input {
+  width: 48%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #2c2c2c;
+  color: #f1f1f1;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  }
+
+.write input:focus {
+  border-color: #4caf50;
+}
+
+.save {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.save button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save button:hover {
+  background-color: #45a049;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.entry input {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.entry button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff1e00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.entry button:hover {
+  background-color: #d11700;
+}
+
+.formula {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+
+.meeting {
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.meeting:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
+
+.meeting h3 {
+  color: #ff1e00;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.meeting > h5, .meeting >h6 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.sessions {
+  display: none;
+  margin-top: 10px;
+}
+
+.session {
+  background-color: #3c3c3c73;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.session:hover {
+  transform: scale(1.03);
+  background-color: #444444cc;
+}
+
+.session h4 {
+  color: #ff1e00;
+}
+
+.session ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.session ul li {
+  margin-bottom: 5px;
+}
+
+.session ol {
+  display: none;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.session ol li {
+  margin-bottom: 5px;
+}
+
+.session ol li::before {
+  content: "🏎️ ";
+  margin-right: 5px;
+}
+
+.meeting,
+.session {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popover {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('../img/end.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popover h3 {
+  color: #ff1e00;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.popover ol {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.popover ol li {
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.popover ol li::before {
+  content: "🏎️ ";
+  margin-right: 5px;
+}
+
+.popover .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff1e00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popover .close-btn:hover {
+  background-color: #d11700;
+}
+
+/* Add overlay for background dimming */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  display: none;
+}
+
+.road1 {
+  background: url('../img/road1.png') no-repeat center center;
+  background-size: cover;
+}
+
+.road2 {
+  background: url('../img/road2.png') no-repeat center center;
+  background-size: cover;
+}
+
+.road3 {
+  background: url('../img/road3.png') no-repeat center center;
+  background-size: cover;
+}
+
+.road4 {
+  background: url('../img/road4.png') no-repeat center center;
+  background-size: cover;
+}
+

@@ -1,0 +1,100 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  font-family: 'Dancing Script', Arial, Helvetica, sans-serif;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  align-items: center;
+}
+
+section.choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  margin: 50px;
+}
+
+
+.card {
+  width: 100px;
+  height: 150px;
+  background-image: url('../img/card.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 2px 2px rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: transform 0.6s ease-in-out;
+}
+
+.selected {
+  transform: translateY(-20px);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+button {
+  background-color: rgb(205, 161, 92);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+button:hover {
+  transform: scale(1.2);
+  transition: transform 0.6s ease-in-out;
+}
+
+.results {
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+  position: relative;
+  margin: 50px;
+}
+
+.result {
+  width: 200px;
+  height: 300px;
+  box-shadow: 1px 1px 2px 2px rgba(255, 255, 255, 0.8);
+}
+
+.result:hover {
+  transform: scale(1.1);
+  transition: transform 0.6s ease-in-out;
+}
+
+
+input {
+  margin-bottom: 20px;
+  width: 300px;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "wu-tang-generator",
+  "version": "1.0.0",
+  "description": "WU-Tang Name generator",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jesulayomi <jesulayomi081@gmail.com> (https://www.jesulayomi.tech/)",
+  "license": "MIT",
+  "dependencies": {
+    "figlet": "^1.8.0",
+    "nodemon": "^3.1.9"
+  }
+}

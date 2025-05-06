@@ -1,0 +1,93 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+p {
+  margin-bottom: 2px;
+}
+
+div.user {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+}
+
+input {
+  width: 80%;
+}
+
+button {
+  padding: 5px 10px;
+  width: 30%;
+  margin: 10px;
+  color: white;
+  background-color: green;
+  border: none;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+
+button:hover {
+  transform: scale(1.1);
+  transition: transform 0.6s ease-in-out;
+}
+
+span.promo {
+  font-size: 0.7em;
+}
+
+section.sites {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+div.site {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  padding: 10px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+div.site:hover {
+  transform: scale(1.1);
+  transition: transform 0.6s ease-in-out;
+}
+
+.site h6 {
+  font-weight: bold;
+  margin: 5px 0px;
+  text-align: left;
+}
+
+.site h4 {
+  text-align: left;
+  margin: 5px 0px;
+}
+
+.sites p {
+  margin: 20px;
+}

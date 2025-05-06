@@ -1,0 +1,56 @@
+/******************************************
+/* CSS
+/*******************************************/
+@font-face {
+  font-family: Herculanum;
+  src: url('./Herculanum-Regular.ttf');
+}
+
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  font-family: Herculanum;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+  background-image: url('../img/default.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 1s ease-in-out;
+}
+
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quiz {
+  border: 5px solid rgb(73, 47, 34);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/questions.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+button {
+  margin-top: 20px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+h1 {
+  color: rgb(73, 47, 34);
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow:  1px 1px 2px rgba(255, 255, 255, 0.8);
+}
